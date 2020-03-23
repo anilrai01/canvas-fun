@@ -9,6 +9,8 @@ let mouse = {
   y: undefined
 };
 
+let numbers = prompt("How many bubbles do you wanna see?");
+
 function getDistance(x1, y1, x2, y2) {
   return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
 }
@@ -77,7 +79,7 @@ let circleArray = [];
 
 function init() {
   circleArray = [];
-  for (let i = 0; i < 150; i++) {
+  for (let i = 0; i < numbers; i++) {
     let rad = 20;
     let x = Math.random() * (innerWidth - rad * 2) + rad;
     let y = Math.random() * (innerHeight - rad * 2) + rad;
