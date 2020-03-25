@@ -32,6 +32,8 @@ window.addEventListener("click", function() {
   init();
 });
 
+let balls = prompt("How many particles do you wanna see: ");
+
 let gravity = 1;
 let friction = 0.9;
 
@@ -70,7 +72,7 @@ function Circle(x, y, dx, dy, rad, color) {
 let playerArray;
 function init() {
   playerArray = [];
-  for (let i = 0; i < 200; i++) {
+  for (let i = 0; i < balls; i++) {
     let rad = randomInt(20, 30);
     let x = randomInt(rad, canvas.width - rad * 2);
     let y = randomInt(0, canvas.height - rad * 2);
